@@ -29,35 +29,6 @@
     }
   },
   {
-    "name": "Nimra Adnan",
-    "email": "tkubiakl@blinklist.com",
-    "password": "dummy user",
-    "user_img": "",
-    "sent_requests": [],
-    "received_requests": [],
-    "friends": [],
-    "remember_me": true,
-    "OTPVerified": true,
-    "userbioVerified": true,
-    "notifications": [],
-    "user_bio": {
-      "first_name": "Nimra",
-      "last_name": "Adnan",
-      "date_of_birth": "2000-11-04",
-      "cast": "Sial",
-      "city": "Ghotki",
-      "country": "Pakistan",
-      "education_level": "MS",
-      "employment_status": "Employed",
-      "gender": "Female",
-      "height": 5.0,
-      "marital_status": "Widower",
-      "profession": "Chef",
-      "religion": "Jainism",
-      "residence": "Kasur"
-    }
-  },
-  {
     "name": "Asad Jamal",
     "email": "elehrerm@smh.com.au",
     "password": "dummy user",
