@@ -95,6 +95,17 @@ const getAllProfiles = async (req, res) => {
     .json({ allProfiles, requests, notifications: notifications, lastProfile })
 }
 
+const getProfiles = async (req, res) => {
+  try {
+    let allProfiles = await User.find({
+      userbioVerified: true,
+    })
+    res.status(200).json({ allProfiles })
+  } catch (error) {
+    res.status(401).json({ error })
+  }
+}
+
 const getProfileData = async (req, res) => {
   try {
     const resp = await User.findOne({ _id: req.query.userId })
@@ -279,4 +290,5 @@ module.exports = {
   updateUser,
   deleteImage,
   getNotificationsUserData,
+  getProfiles,
 }
