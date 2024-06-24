@@ -127,9 +127,9 @@ app.use('/api/otp', OTPRouter)
 app.use('/api/message', authenticationMiddleware, messageRouter)
 app.use('/api/requests', authenticationMiddleware, requestRouter)
 
-// app.get('*', async (req, res) => {
-//   return res.sendFile(path.resolve(__dirname, './public/build', 'index.html'))
-// })
+app.get('*', async (req, res) => {
+  return res.sendFile(path.resolve(__dirname, './public/build', 'index.html'))
+})
 
 app.use(notFound)
 app.use(errorHandlerMiddleware)

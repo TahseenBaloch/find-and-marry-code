@@ -1,6 +1,7 @@
 const User = require('../model/User')
 const { StatusCodes } = require('http-status-codes')
 const fs = require('fs')
+const { ObjectId } = require('mongodb')
 
 const updateUser = async (req, res) => {
   const request = req.body
@@ -256,6 +257,17 @@ const deleteImage = async (req, res) => {
   }
 }
 
+const getNotificationsUserData = async (req, res) => {
+  const { notificationUserIds } = req.body
+
+  try {
+    const data = await User.find({ _id: { $in: notificationUserIds } })
+    return res.status(StatusCodes.OK).json(data)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 module.exports = {
   getAllProfiles,
   sendRequest,
@@ -266,4 +278,5 @@ module.exports = {
   getProfileData,
   updateUser,
   deleteImage,
+  getNotificationsUserData,
 }

@@ -8,6 +8,7 @@ const {
   rejectRequest,
   updateUser,
   deleteImage,
+  getNotificationsUserData,
 } = require('../controllers/profiles')
 
 router.route('/send-request').put(sendRequest)
@@ -17,4 +18,5 @@ router.route('/reject-request').put(rejectRequest)
 router.route('/get-user').get(getUserData)
 router.route('/update-user').patch(updateUser)
 router.route('/delete-image').post(deleteImage)
+router.route('/get-notification-users').post(getNotificationsUserData)
 module.exports = router
